@@ -30,3 +30,23 @@ function printAge() {
 
 var print = printAge.bind(Student);
 print();
+
+
+// function currying
+
+let multiply=function(x,y){
+    console.log(x*y)
+}
+let multiplyByTwo=multiply.bind(this,2);
+multiplyByTwo(3);
+
+
+//by closure 
+let multiply1=function(x){
+    return function (y)
+    {
+        console.log(x*y);
+    }
+}
+let multiplyByTwo1=multiply1(2);
+multiplyByTwo1(3);
